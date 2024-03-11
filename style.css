@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --DarkBlue: hsl(240, 38%, 20%);
+  --GrayishBlue: hsl(240, 18%, 77%);
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--DarkBlue);
+  overflow: hidden;
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg-pattern img {
+  width: 21em;
+  height: 20em;
+}
+
+.container-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.container-img {
+  position: relative;
+  margin: 1rem;
+}
+.main-container {
+  position: relative;
+  margin: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.container-description {
+  background-image: url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: center top;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--DarkBlue);
+  font-weight: 400;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote {
+  font-weight: 500;
+}
+.name {
+  font-weight: 700;
+}
+.profession {
+  color: var(--GrayishBlue);
+  font-size: 0.9rem;
+}
+.container-btn {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 20px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Asegura que los botones estén sobre la imagen */
+}
+
+button {
+  padding: 0.6rem 0.9rem;
+  background-color: white;
+  border: none;
+  outline: none;
+  float: left;
+  margin: -1px;
+  cursor: pointer;
+}
+
+.avatar-info {
+  margin-top: 1.3rem;
+}
+
+.pattern {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-image: url(./images/pattern-curve.svg);
+
+  position: fixed;
+}
+
+@media (min-width: 43.75em) {
+  .main-container {
+    flex-direction: row-reverse;
+    margin: 5rem;
+    height: 30rem;
+    background-position: 1px 2px;
+  }
+
+  .quote {
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  .avatar-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  body {
+    display: flex;
+    align-items: center;
+  }
+  .container-description {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-size: 6rem;
+    background-position: 20% 20%;
+    position: relative;
+    left: 5rem;
+  }
+  .container-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-img {
+    margin-right: 4rem;
+  }
+  .bg-pattern {
+    position: absolute;
+    top: 50%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+  }
+  .bg-pattern img {
+    width: 547px;
+    height: 531px;
+  }
+}
